@@ -2,10 +2,12 @@
 /*   Provided Code - Please Don't Edit   */
 ////////////////////////////////////////////////
 'use strict';
-
-function getInput() {
+var getInput = function() {
     var playerMove = prompt("Please choose either 'rock', 'paper', or 'scissors'.");
+    console.log(playerMove)
 }
+getInput();
+
 function randomPlay() {
     var randomNumber = Math.random();
     if (randomNumber < 0.33) {
@@ -19,35 +21,43 @@ function randomPlay() {
 randomPlay();
 
 function getPlayerMove(move) {
-    return playerMove;
+  move = playerMove();
+  console.log(playerMove);
 }
+getPlayerMove(playerMove)
 
 function getComputerMove(move) {
-   return computerMove;
+   var computerMove = randomNumber;
 }
-
+getComputerMove(randomNumber)
  // Write code that will set winner to either 'player', 'computer', or 'tie' based on the values of playerMove and computerMove.
 
 function getWinner(playerMove,computerMove) {
-    var winner;
-    for(){
-    if ("rock" && "scissors") {
-        return "rock wins";
-        console.log("rock wins");
-    } else if ("rock" && "paper") {
-        return "paper wins";
-    } else if ("paper" && "scissors"){
-        return "scissors wins";
-    } else {
-         return "re-do!";
-    }
+  var winner;
 
-    if (p === "rock wins" || p === "scissors wins" || p === "paper wins"){
-        return "you win!";
-    } else {
-        return "sorry " + computerMove + " wins";
+    var win = function(){
+      if ("rock" && "scissors") {
+          return "rock wins";
+          console.log("rock wins");
+      } else if ("rock" && "paper") {
+          return "paper wins";
+      } else if ("paper" && "scissors"){
+          return "scissors wins";
+      } else {
+           return "re-do!";
+      }
     }
-}
+    win();
+    console.log(win);
+    /*forEach(win){
+      if (p === "rock wins" || p === "scissors wins" || p === "paper wins"){
+          return "you win!";
+          playerWins +=;
+      } else {
+          return "sorry " + computerMove + " wins";
+      }
+    }*/
+
 }
 getWinner("scissors", "paper");
 
@@ -59,4 +69,5 @@ function playToFive() {
     /* YOUR CODE HERE */
     return [playerWins, computerWins];
 }
+
 
